@@ -1,0 +1,181 @@
+/*Estilos generales*/
+body{
+	background-color: #dcdcdc;
+	text-align: center;
+	margin:0;
+	padding:0;
+	font-family: verdana;
+}
+/*Logotipo*/
+.containere{
+	text-align: center;
+}
+.center{
+	display: inline-block;
+}
+.radius{
+	width: 7em;
+	height: 7em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #606060;
+}
+/*Navegador*/
+nav{
+	background-color: #e0e0e0;
+	padding-bottom: 2em;
+	margin-bottom: 1em;
+}
+nav ul{
+	list-style: none;
+	max-height: 3em;
+}
+li{
+	display: inline-block;
+	padding:3em;
+	border-width: 1px;
+}
+/*Carrusel; me disculpo por no poner fotos, al final lo que me interesaba era marcar la funcionalidad
+no soy buena con js, pero la animación css se me da más o menos; en los elementos podemos agregar la img 
+como background, no es de las mejores prácticas, pero me resulta en mi eterno huir de js.*/
+input[name="slider-select-element"] {
+	display: none;
+}
+#slider-arrows {
+	margin: -10% auto 0 auto;
+	width: 80%;
+}
+#slider-box {
+	height: 80%;
+	width: 300%;
+}
+#slider-container {
+	height: 20%;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: left;
+	width: 60%;
+}
+.element-one,
+.element-two,
+.element-three {
+	min-height: 20em;
+	max-height: 100%;
+	width: 100%;
+}
+.element-one{
+	background: blue;
+}
+.element-two{
+	background: green;
+}
+.element-three{
+	background: red;
+}
+.slider-element {
+	float: left;
+	width: 33.333%;
+}
+#element1:checked ~ #slider-arrows label:nth-child(2),
+#element2:checked ~ #slider-arrows label:nth-child(3),
+#element3:checked ~ #slider-arrows label:nth-child(1) {
+	display: block;
+	float: right;
+}
+#element1:checked ~ #slider-arrows label:nth-child(3),
+#element2:checked ~ #slider-arrows label:nth-child(1),
+#element3:checked ~ #slider-arrows label:nth-child(2) {
+	display: block;
+	float: left;
+}
+
+#element1:checked ~ #slider-arrows label:nth-child(2):before,
+#element2:checked ~ #slider-arrows label:nth-child(3):before,
+#element3:checked ~ #slider-arrows label:nth-child(1):before {
+	color: black  ;
+	content: "\f054";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+}
+#element1:checked ~ #slider-arrows label:nth-child(3):before,
+#element2:checked ~ #slider-arrows label:nth-child(1):before,
+#element3:checked ~ #slider-arrows label:nth-child(2):before {
+	color: black  ;
+	content: "\f053";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+}
+#element1:checked ~ #slider-container #slider-box {
+	margin-left: 0;
+}
+#element2:checked ~ #slider-container #slider-box {
+	margin-left: -100%;
+}
+#element3:checked ~ #slider-container #slider-box {
+	margin-left: -200%;
+}
+#slider-arrows label {
+	color: transparent;
+	cursor: pointer;
+	display: none;
+	font-size: 2rem;
+	height: 20px;
+	width: 20px;
+}
+#slider-box {
+	-webkit-transition: all 0.75s ease;
+	-moz-transition: all 0.75s ease;
+	-ms-transition: all 0.75s ease;
+	-o-transition: all 0.75s ease;
+	transition: all 0.75s ease;
+}
+/*Descripciones*/
+.margin{
+	margin-top: 10%;
+}
+.image{
+	min-width:200px; 
+	min-height:200px;
+	background-color: #CCCCCC;
+	padding-top:45%;
+}
+.shadow{ 
+	text-align: center;
+	color:#999999;
+	font-size:1em;
+}
+.block{
+	margin:10%;
+	margin-top:10%;
+	margin-bottom:5%;
+	padding:10px 20px 5px 20px; 
+	width: 300px;  
+	text-align: justify;
+}
+/*Footer*/
+footer{
+	text-align: justify;
+	padding-top:2%;
+}
+footer p{
+	margin:0;
+}
+.social{
+	width: 1em;
+	height: 1em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #606060;
+	display: inline-block;
+	margin:3%;
+}
